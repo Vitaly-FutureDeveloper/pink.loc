@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pink</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <a href="#" class="page-header__logo">
+            <img src="/img/logotype-white-mobile.svg.svg" class="page-header__logo-image" alt="Pink логотип">
+        </a>
+        <nav class="main-nav">
+            <button class="main-nav__open" type="button">Открыть меню</button>
+            <button class="main-nav__close" type="button">Закрыть меню</button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item">
+                        <a href="#">Главная</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="#">Фотографии</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="#">Конкурс</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="#">HTML Academy</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <h1 class="visually-hidden">Pink</h1>
+
+
+        <section class="intro">
+            <header class="intro__header">
+                <img src="#" alt="">
+                <img src="#" alt="">
+            </header>
+            <div class="intro__logos">
+                <h2 class="page-main__title title-form">Конкурс на самое безбашенное путешествие с Пинк</h2>
+                <!--<small class="intro__legend">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</small>-->
+            </div>
+        </section>
+
+        <section class="main-form">
+            <form action="#" class="main-form__general">
+                <fieldset class="main-form__inputs inputs-names">
+                    <legend>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную
+                        карту! <span class="visually-hidden">Пожалуйста, заполните форму ниже:</span> </legend>
+                    <ul class="main-form__inputs--list input__names">
+                        <li class="input__list-item item-names">
+                            <label for="sorname">
+                                <p class="item-names-paragraph">Фамилия:</p>
+                            </label>
+                            <input type="text" name="sorname" id="sorname" placeholder="Укажите фамилию *">
+                        </li>
+                        <li class="input__list-item item-names">
+                            <label for="name">
+                                <p class="item-names-paragraph">Имя:</p>
+                            </label>
+                            <input type="text" name="name" id="name" placeholder="Введите ваше имя *">
+                        </li>
+                        <li class="input__list-item item-names">
+                            <label for="patronymic">
+                                <p class="item-names-paragraph">Отчество:</p>
+                            </label>
+                            <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="main-form__inputs inputs-progress">
+                    <legend>Ваши безбашенные
+                        достижения в путешествии</legend>
+
+                    <ul class="main-form__inputs--list input__progress">
+
+                        <li class="input__list-item item-progress">
+                            <label for="progress-selfy">
+                                <p class="item__paragraph item-progress-paragraph">Сделал селфи с акулой</p>
+                            </label>
+                            <input type="checkbox" name="progress" value="selfy" id="progress-selfy" checked>
+                        </li>
+
+                        <li class="input__list-item item-progress">
+                            <label for="progress-burn">
+                                <p class="item__paragraph item-progress-paragraph">Обгорел на пляже</p>
+                            </label>
+                            <input type="checkbox" name="progress" value="burn" id="progress-burn" checked>
+                        </li>
+
+                        <li class="input__list-item item-progress">
+                            <label for="progress-sawchack">
+                                <p class="item__paragraph item-progress-paragraph">Видел Чака Норриса</p>
+                            </label>
+                            <input type="checkbox" name="progress" value="sawchack" id="progress-sawchack">
+                        </li>
+
+                        <li class="input__list-item item-progress">
+                            <label for="progress-souvenir">
+                                <p class="item__paragraph item-progress-paragraph">Накупил сувениров</p>
+                            </label>
+                            <input type="checkbox" name="progress" value="souvenir" id="progress-souvenir">
+                        </li>
+
+                        <li class="input__list-item item-progress">
+                            <label for="progress-tower">
+                                <p class="item__paragraph item-progress-paragraph">Удержал башню</p>
+                            </label>
+                            <input type="checkbox" name="progress" value="tower" id="progress-tower" checked>
+                        </li>
+
+                        <li class="input__list-item item-progress">
+                            <label for="progress-crash">
+                                <p class="item__paragraph item-progress-paragraph">Разгромил отель</p>
+                            </label>
+                            <input type="checkbox" name="progress" value="crash" id="progress-crash">
+                        </li>
+
+                    </ul>
+                </fieldset>
+
+                <fieldset class="main-form__inputs inputs-attachment">
+                    <legend>С каким приложением
+                        путешествовали?</legend>
+
+                    <ul class="main-form__inputs--list input__attachment">
+                        <li class="input__list-item item-attachment">
+                            <label for="attachment-iOS">
+                                <p class="item__paragraph item-attachment-paragraph">Pink для iOS</p>
+                            </label>
+                            <input type="radio" name="attachment-iOS" id="attachment-iOS" checked>
+                        </li>
+                        <li class="input__list-item item-attachment">
+                            <label for="attachment-Android">
+                                <p class="item__paragraph item-attachment-paragraph">Pink на Android</p>
+                            </label>
+                            <input type="radio" name="attachment-Android" id="attachment-Android">
+                        </li>
+                        <li class="input__list-item item-attachment">
+                            <label for="attachment-Windows">
+                                <p class="item__paragraph item-attachment-paragraph">Windows Phone</p>
+                            </label>
+                            <input type="radio" name="attachment-Windows" id="attachment-Windows">
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="main-form__inputs inputs-amotion">
+                    <legend>Опишите свои эмоции</legend>
+                    <textarea name="amotion" cols="30"
+                        rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+                </fieldset>
+
+                <button class="button button-form" type="submit">Отправить форму</button>
+                <small class="intro__form">* — обязательные поля</small>
+            </form>
+        </section>
+
+        <footer class="page-footer">
+            <div class="page-footer__wrapper">
+                <div class="page-footer__logo">
+                    <img src="/img/logotype-blue-tablet.svg.svg" alt="">
+                </div>
+                <div class="page-footer__social social">
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <a href="vk.com" class="social__link social__link--twitter">Мы в твиттере</a>
+                        </li>
+                        <li class="social__item">
+                            <a href="facebook.com" class="social__link social__link--facebook">Мы в фейсбуке</a>
+                        </li>
+                        <li class="social__item">
+                            <a href="instagram.com" class="social__link social__link--youtube">Мы в ютубе</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-footer__copyright copyright">
+                    <b class="copyright-text">Разработано</b>
+                    <a href="#" class="button copyright__link">
+                        <img src="/img/htmlacademy.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
+</html>
