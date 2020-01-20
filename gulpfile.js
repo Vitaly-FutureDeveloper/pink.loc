@@ -17,7 +17,6 @@ gulp.task('less', function () {
 });
 
 gulp.task("style", function(){
-
 		gulp.src('./less/style.less')
 		.pipe(plumber())
 		.pipe(less())
@@ -37,6 +36,10 @@ gulp.task("serve",  function(done){
 		ui: false
 	});
 	gulp.watch("./less/", gulp.series('less'));
+	gulp.watch("./less/*/*.less").on("change", () => {
+		server.reload();
+		done();
+	});
 	gulp.watch("*.html").on("change", () => {
 		server.reload();
 		done();

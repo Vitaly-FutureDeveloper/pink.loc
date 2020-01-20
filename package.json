@@ -1,0 +1,30 @@
+{
+  "name": "barbershop2.loc",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitaly-FutureDeveloper/barbershop2.loc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitaly-FutureDeveloper/barbershop2.loc/issues"
+  },
+  "homepage": "https://github.com/Vitaly-FutureDeveloper/barbershop2.loc#readme",
+  "description": ""
+}
