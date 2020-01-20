@@ -1,3 +1,5 @@
+console.log("Hello World");
+/*
 var nojs = document.querySelector('.main-nav--nojs');
 	nojs.classList.remove('main-nav--nojs');
 
@@ -14,3 +16,4 @@ if( menu.classList.contains('main-nav--opened') ){
 		console.log(iteration);
 	} catch{}
 }
+/*
