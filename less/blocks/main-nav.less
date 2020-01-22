@@ -1,15 +1,7 @@
 .main-nav{
-	position: relative;
-
-	top: 0;
-	left: 0;
-
 	display: flex;
 	flex-direction: column;
-	/*
-	align-items: stretch;
-	align-content: stretch;
-*/
+
 	width: auto;
 	margin: 0 auto;
 
@@ -51,8 +43,13 @@
 		margin: 0 auto;
 	}
 
-	.main-nav--opened .main-nav__toggle{
-		top: 45px;
-		right: 40px;
+}
+@media(min-width: @desctop-width){
+	.main-nav{
+		width: @desctop-width;
+		margin: 0;
+
+		background-color: rgba(24, 32, 41, 0.3);
 	}
+
 }

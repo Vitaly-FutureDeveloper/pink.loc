@@ -69,3 +69,27 @@
 		color: #ffffff;
 	}
 }
+
+
+//Отрисовка псевдоэлемента для создания эффекта "переход-гильотина"
+//	@wsize, @hsize, @top
+//Ширина экрана, высота элемента, смещение вверх
+.info_advatages__wrap-items(@wsize, @hsize, @top){
+	position:relative;
+
+	background-color: #f2f2f2;
+
+	&::before{
+		position: absolute;
+		content: "";
+		top: -@top;
+
+		width: @wsize;
+		height: @hsize;
+
+		transform: skewY(-5deg);
+		
+		background-color: #f2f2f2;
+		z-index: -1;
+	}
+}
