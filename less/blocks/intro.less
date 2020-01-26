@@ -21,6 +21,8 @@
 
 	@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
 		background-image: url("../img/bg-back-mobile@2x.jpg");
+		background-repeat: no-repeat;
+		background-position: top;
 	}
 }
 
@@ -153,6 +155,10 @@
 // Form
 */
 
+.page-main__inner-page .intro{
+	margin:0;
+	padding:0;
+}
 .intro__slogan.page-main__title {
 	display: inline-block;
 
@@ -165,4 +171,27 @@
 	font-weight: 300;
 
 	margin-top: 102px;
+}
+
+.page-main__inner-page .intro__header{
+	min-height: 0;
+	height: 235px;
+
+	margin:0;
+	padding:0;
+
+	margin-bottom: 54px;
+}
+.page-main__inner-page .intro__logos{
+	padding: 55px 25px 0px;
+
+	background-color: #ffffff;
+}
+
+.page-main__inner-page .intro__legend{
+	color: #283645;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
 }
