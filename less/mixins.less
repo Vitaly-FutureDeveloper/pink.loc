@@ -22,12 +22,13 @@
 	border: 3px solid #ffffff;
 	background: transparent;
 
-	&:hover{
+	&:hover,
+	&:focus{
 		background-color: #ffffff;
 		box-shadow: 0 5px 7px rgba(1, 1, 1, 0.75);
 		color: #d22856;
 	}
-	&:focus{
+	&:active{
 		background-color: #ffffff;
 		color: rgba(210, 40, 86, 0.3);
 	}
@@ -39,11 +40,12 @@
 	border: 3px solid #d22856;
 	background: transparent;
 
-	&:hover{
+	&:hover,
+	&:focus{
 		background-color: #d22856;
 		color: #ffffff;
 	}
-	&:focus{
+	&:active{
 		color: rgba(255, 255, 255, 0.3);
 	}
 }
@@ -56,11 +58,12 @@
 	color: #ffffff;
 	text-transform: uppercase;
 
-	&:hover{
+	&:hover,
+	&:focus{
 		border: 2px solid #1c9b5e;
 		background-color: #1c9b5e;
 	}
-	&:focus{
+	&:active{
 		color: rgba(255, 255, 255, 0.3);
 	}
 	&:disabled{
@@ -75,21 +78,154 @@
 //	@wsize, @hsize, @top
 //Ширина экрана, высота элемента, смещение вверх
 .info_advatages__wrap-items(@wsize, @hsize, @top){
-	position:relative;
+	position: relative;
 
 	background-color: #f2f2f2;
 
 	&::before{
+
+		content:"";
+
 		position: absolute;
-		content: "";
+		
 		top: -@top;
+		right: 0;
 
 		width: @wsize;
 		height: @hsize;
 
-		transform: skewY(-5deg);
+		background-image: url("../img/bg-triangle-white.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		transform: rotate(180deg);
+	}
+}
+
+//Для стилизации переключателей слайдеров
+//Группировка слайдеров
+.slider_uls(){
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+//Сами переключатели на кнопки
+.slider_buttons(){
+	position: relative;
+	top: 0;
+	left: 0;
+
+	width: 16px;
+	height: 16px;
+	padding: 8px;
+	margin: 8px;
+
+
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+
+
+	&::before{
+		content: "";
+
+		position: absolute;
+		top: 35%;
+		left: 35%;
+
+		width: 3px;
+		height: 3px;
+		border: 3px solid rgba(0, 0, 0, 0.3);
+		box-sizing: border-box;
+		border-radius: 50%;
+	}
+	&:hover::before,
+	&:focus::before{
+		border-color: rgba(0, 0, 0, 0.6);
+	}
+	&:active::before{
+		border-color: rgba(0, 0, 0, 0.1);
+	}
+
+	&.slider__toggle--enabled::before {
+		content: "";
+
+		position: absolute;
+		top: 15%;
+		left: 15%;
+
+		width: 6px;
+		height: 6px;
+
+		border: 3px solid #283645;
+		border-radius: 50%;
+		box-sizing: content-box;
+		background-color: #ffffff;
+	}
+}
+
+//Отрисует полоску ХИТ на ячейке таблицы
+//Переменные:
+//Картинка BG, смещение сверху, снизу
+//Надпись, смещение сверху, снизу
+.table_bg_hit(@bg, @top_bg, @left_bg, @text, @top_text, @left_text){
+	&:nth-of-type(3)::before{
+		content: "";
+
+		position: absolute;
+
+		top: @top_bg;
+		left: @left_bg;
+
+		width: 61px;
+		height: 61px;
+
+		background-color: transparent;
+		background-image: url(@bg);
+		background-size: cover;
+	}
+	&:nth-of-type(3)::after{
+		content: "Хит";
+
+		position: absolute;
+
+		top: @top_text;
+		left: @left_text;
+
+		color:  #ffffff;
+		font-family: "Open Sans - Semibold";
+		font-size: 10px;
+		font-weight: 400;
+		line-height: 21.21px;
+		text-transform: uppercase;
+
+		transform: rotate(-45deg);
+	}
+}
+
+//Нарисует теугольник, наезжающий на карту
+//Смещение вниз, высота
+.triangle_contact_wrap(@bottom, @height){
+	&::after{
+		content:"";
+
+		position: absolute;
 		
-		background-color: #f2f2f2;
-		z-index: -1;
+		right: 0;
+		bottom: @bottom;
+
+		width: 100%;
+		height: @height;
+
+		background-image: url("../img/bg-triangle-white-footer.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
 	}
 }
