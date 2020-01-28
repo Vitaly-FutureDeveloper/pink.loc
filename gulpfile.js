@@ -17,17 +17,17 @@ gulp.task('less', function () {
 });
 
 gulp.task("style", function(){
-		gulp.src('./less/style.less')
+		return gulp.src('./less/style.less')
 		.pipe(plumber())
 		.pipe(less())
 		.pipe(postcss([
 			autoprefixer()
 		]))
-		.pipe(gulp.dest("css"))
+		.pipe(gulp.dest("./css"))
 		.pipe(server.stream());
 });
 
-gulp.task("serve",  function(done){
+gulp.task("serve", function(done){
 		server.init({
 		server: ".",
 		notify: false,
@@ -35,7 +35,7 @@ gulp.task("serve",  function(done){
 		cors: true,
 		ui: false
 	});
-	gulp.watch("./less/", gulp.series('less'));
+	gulp.watch("./less/", gulp.series('style'));
 	gulp.watch("./less/*/*.less").on("change", () => {
 		server.reload();
 		done();
