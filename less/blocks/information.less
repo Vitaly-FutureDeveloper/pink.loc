@@ -107,16 +107,23 @@
 		justify-content: space-between;
 
 		width: @tablet-width;
+
 	}
 	.information-advatages__list{
 		display: block;
 		flex: 1;
 		
 		padding-top: 0;
+		padding-bottom: 0;
 	}
 	.information-advatages__mobiles-wrapper{
+		position: relative;
+		top: -45px;
+
 		flex: 1;
 		order: -1;
+
+		z-index: 8;
 	}
 	.information-advatages__mobiles{
 		display: block;
@@ -192,6 +199,7 @@
 
 		flex: 1;
 		margin-top: -65px;
+		margin-left: 35px;
 	}
 	.information-advatages__mobiles-wrapper{
 		position: relative;
@@ -221,14 +229,16 @@
 			display:flex;
 			flex-direction: row;
 			justify-content: center;
-			margin-left: 10px;
 		}
 	}
-
+	.advatages-title{
+		font-size: 30px;
+		line-height: 40px;
+	}
 	.advatages-title,
 	.advatages-description{
 		text-align: center;
-		margin: 25px 40px;
+		margin: 25px 10px;
 	}
 	.advatages-description{
 		text-align: center;

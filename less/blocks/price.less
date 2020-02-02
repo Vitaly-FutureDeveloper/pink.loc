@@ -181,8 +181,8 @@
 
 		//Отрисует полоску ХИТ на ячейке таблицы
 		//Переменные:
-		//Картинка BG, смещение сверху, снизу
-		//Надпись, смещение сверху, снизу
+		//Картинка BG, смещение сверху, слева
+		//Надпись, смещение сверху, слева
 		.table_bg_hit("../img/bg-hit-tablet.svg", 2px, 310px, "Хит", 10px, 320px);
 	}
 	.price__table-item--toggle,
@@ -243,5 +243,43 @@
 
 	.price__toggles{
 		display: none;
+	}
+}
+
+@media(min-width: @desctop-width){
+	.price{
+		.info_advatages__wrap-items(100%, 20%, 20%);//Ширина экрана, высота элемента, смещение вверх
+
+		padding-top: 75px;
+		padding-bottom: 70px;
+	}
+	.price__table{
+		width: 940px;
+	}
+	.price__table-option{
+		width: 152px;
+		height: 75px;
+	
+		min-width: 152px;
+		min-height: 94px;
+
+		border-radius: 5px;
+
+		& h3{
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: 700;
+		}
+
+		& p{
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		//Отрисует полоску ХИТ на ячейке таблицы
+		//Переменные:
+		//Картинка BG, смещение сверху, слева
+		//Надпись, смещение сверху, слева
+		.table_bg_hit("../img/bg-hit-tablet.svg", 2px, 471px, "Хит", 10px, 480px);
 	}
 }

@@ -1,0 +1,6 @@
+#crd{
+	fill: red;
+}
+.page-header__logo:hover{ #crd{
+	fill: white;
+}}

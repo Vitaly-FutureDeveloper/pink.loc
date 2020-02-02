@@ -4,8 +4,8 @@
 	margin: 20px;
 	padding: 0;
 
-	//padding-top: 45px;
 	margin-top: 0;
+	padding-top: 45px;
 
 	background-color: #ffffff;
 
@@ -34,6 +34,8 @@
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 30px;
+
+	margin-bottom: 25px;
 
 	& .reviews__autor-proffession{
 		display: none;
@@ -70,6 +72,9 @@
 }
 
 @media(min-width: @tablet-width){
+	.reviews{
+		padding-top: 0;
+	}
 	.reviews__item{
 		display: none;
 
@@ -88,6 +93,7 @@
 	.reviews__autor-name{
 		order: 1;
 		font-size: 20px;
+		margin: 0;
 		padding-top: 45px;
 
 		& .reviews__autor-proffession{
@@ -107,6 +113,9 @@
 }
 
 @media(min-width: @desctop-width){
+	.reviews{
+		margin-bottom: 125px;
+	}
 	.reviews__toggles-bottom{
 		display: none;
 	}

@@ -118,6 +118,10 @@
 						<li class="advatages__item-mobile
 							advatages__item-mobile--active">
 							<picture>
+								<source type="image/webp" media="(min-width:960px)" srcset="img/iphone-screen-1-desktop@2x.webp 2x, img/iphone-screen-1-desktop@1x.webp 1x">
+								<source type="image/webp" media="(min-width:660px)" srcset="img/iphone-screen-1-tablet@2x.webp 2x, img/iphone-screen-1-tablet@1x.webp 1x">
+								<source type="image/webp" media="(min-width:320px)" srcset="img/iphone-screen-mobile@2x.webp 2x, img/iphone-screen-mobile@1x.webp 1x">
+
 								<source media="(min-width:960px)" srcset="img/iphone-screen-1-desktop@2x.png 2x, img/iphone-screen-1-desktop@1x.png 1x">
 								<source media="(min-width:660px)" srcset="img/iphone-screen-1-tablet@2x.png 2x, iphone-screen-1-tablet@1x.png 1x">
 								<source media="(min-width:320px)" srcset="img/iphone-screen-mobile@2x.png 2x, img/iphone-screen-mobile@1x.png 1x">
@@ -126,6 +130,9 @@
 						</li>
 						<li class="advatages__item-mobile">
 							<picture>
+								<source type="image/webp" media="(min-width:960px)" srcset="img/iphone-screen-2-desktop@2x.webp 2x, img/iphone-screen-2-desktop@1x.webp 1x">
+								<source type="image/webp" media="(min-width:660px)" srcset="img/iphone-screen-2-tablet@2x.webp 2x, iphone-screen-2-tablet@1x.webp 1x">
+
 								<source media="(min-width:960px)" srcset="img/iphone-screen-2-desktop@2x.png 2x, img/iphone-screen-2-desktop@1x.png 1x">
 								<source media="(min-width:660px)" srcset="img/iphone-screen-2-tablet@2x.png 2x, iphone-screen-2-tablet@1x.png 1x">
 								<!--<source media="(min-width:320px)" srcset="img/iphone-screen-mobile@2x.png 2x, img/iphone-screen-mobile@1x.png 1x">-->
@@ -134,8 +141,11 @@
 						</li>
 						<li class="advatages__item-mobile">
 							<picture>
-								<source media="(min-width:960px)" srcset="img/iphone-screen-2-desktop@2x.png 2x, img/iphone-screen-2-desktop@1x.png 1x">
-								<source media="(min-width:660px)" srcset="img/iphone-screen-2-tablet@2x.png 2x, iphone-screen-2-tablet@1x.png 1x">
+								<source type="image/webp" media="(min-width:960px)" srcset="img/iphone-screen-3-desktop@2x.webp 2x, img/iphone-screen-3-desktop@1x.webp 1x">
+								<source type="image/webp" media="(min-width:660px)" srcset="img/iphone-screen-3-tablet@2x.webp 2x, iphone-screen-3-tablet@1x.webp 1x">
+
+								<source media="(min-width:960px)" srcset="img/iphone-screen-3-desktop@2x.png 2x, img/iphone-screen-3-desktop@1x.png 1x">
+								<source media="(min-width:660px)" srcset="img/iphone-screen-3-tablet@2x.png 2x, iphone-screen-3-tablet@1x.png 1x">
 								<!--<source media="(min-width:320px)" srcset="img/iphone-screen-mobile@2x.png 2x, img/iphone-screen-mobile@1x.png 1x">-->
 								<img src="img/iphone-screen-1-desktop@1x.png" alt="Рисунок мобильного телефона">
 							</picture>
@@ -158,6 +168,7 @@
 					<a href="#" class="round-diagram__link">Узнать больше об исследовании</a>
 				</div>
 			</section>
+
 			<div class="block-before__rewiews">
 				<object data="img/icon-quotes.svg"
 				type="image/svg+xml" width='79px' height='63px' align="center">
@@ -350,11 +361,11 @@
 				<div class="page-footer__wrapper">
 					<ul class="page-foter-list__icons">
 					<li class="page-footer__logo list__icon-footer">
-						<a href="#">
+						<a href="#" class="page-footer__logo">
 						<picture>
-						<source media="(min-width:960px)" srcset="img/logo-pink-blue-desktop.svg">
-						<source media="(min-width:660px)" srcset="img/logo-pink-blue-mobile.svg">
-							<img src="img/logo-pink-blue-mobile.svg" alt="Логотип">
+							<source class="page-footer__logo-image--desctop" media="(min-width:960px)" srcset="img/logo-pink-blue-desktop.svg">
+							<source class="page-footer__logo-image--tablet" media="(min-width:660px)" srcset="img/logo-pink-blue-mobile.svg">
+								<img class="page-footer__logo-image--mobile" src="img/logo-pink-blue-mobile.svg" alt="Логотип">
 						</picture>
 						</a>
 					</li>
@@ -391,8 +402,8 @@
 						</ul>
 					</li>
 					<li class="page-footer__copyright copyright list__icon-footer">
-						<b class="copyright-text">Разработано</b>
 						<a href="#" class="button copyright__link">
+						<b class="copyright-text">Разработано</b>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 45" width="27px" height="34px">
 								<path fill="#d22856" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
 							</a>

@@ -1,0 +1,2 @@
+cwebp -q 95 iphone-screen-mobile@2x.png -o iphone-screen-mobile@2x.webp
+cwebp -q 95 img/iphone-screen-mobile@1x.png -o img/iphone-screen-mobile@1x.webp
