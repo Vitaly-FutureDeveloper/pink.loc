@@ -1,7 +1,7 @@
 .main-form{
 	width: @mobile-width;
 
-	h3{
+	& h3{
 		color: #d22856;
 		font-family: "Open Sans";
 		font-size: 14px;
@@ -10,8 +10,10 @@
 		text-transform: uppercase;
 		text-align: center;
 	}
-
-	fieldset{
+	& legend{
+		display: none;
+	}
+	& fieldset{
 		border: none;
 
 		margin:0;
@@ -23,6 +25,10 @@
 		&:nth-of-type(1){
 			padding-top: 0;
 		}
+	}
+
+	& input::placeholder{
+		color: #283645;
 	}
 
 	.main-form__inputs--legtoggle{
@@ -55,7 +61,7 @@
 
 	& input[type="text"] {
 		width: 230px;
-		min-height: 59px;
+		min-height: 58px;
 		border: 2px solid #e5e5e5;
 
 		font-size: 18px;
@@ -94,21 +100,25 @@
 		box-sizing: border-box;
 		background-color: #ffffff;
 	}
-	
-	&:hover::after{
+}
+.input__list-item:hover input[type="checkbox"] + .checkbox-indicator,
+.input__list-item:focus input[type="checkbox"] + .checkbox-indicator{
+	&::after{
 		border-color: #283645;
 	}
-	&:focus::after{
+}
+.input__list-item:active input[type="checkbox"] + .checkbox-indicator{
+	&::after{
 		border-color: #d22856;
 	}
 }
+
 .input__list-item input[type="checkbox"]:checked + .checkbox-indicator{
 	&::after{
 		background-image: url("../img/icon-yes--red.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 	}
-	
 }
 
 .input__list-item input[type="radio"] + .checkbox-indicator{
@@ -126,15 +136,21 @@
 		box-sizing: border-box;
 		background-color: #ffffff;
 	}
-	
-	&:hover::before,
-	&:focus::before{
+}
+
+.input__list-item:hover input[type="radio"] + .checkbox-indicator,
+.input__list-item:focus input[type="radio"] + .checkbox-indicator{
+	&::before,
+	&::before{
 		border-color: #283645;
 	}
-	&:active::before{
+}
+.input__list-item:active input[type="radio"] + .checkbox-indicator{
+	&::before{
 		border-color: #d22856;
 	}
 }
+
 .input__list-item input[type="radio"]:checked + .checkbox-indicator{
 	&::after{
 		content: "";
@@ -178,6 +194,15 @@
 	padding: 20px;
 }
 
+.button-form-wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 50px;
+	}
+
 .button-form{
 	.button_form();
 	margin: 20px;
@@ -190,6 +215,10 @@
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 30px;
+
+	border-radius: 3px;
+
+	margin-bottom: 40px;
 }
 
 .intro__form{
@@ -205,4 +234,144 @@
 	& .intro__form--red_simbol{
 		color: #d22856;
 	}
+}
+
+@media(min-width: @tablet-width){
+
+	.main-form{
+		width: @tablet-width;
+
+		& h3{
+			display: none;
+		}
+
+		& legend{
+			display: block;
+
+			color: #d22856;
+			font-family: "Open Sans";
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 18px;
+			text-transform: uppercase;
+
+			padding: 12px 25px;
+
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		& fieldset:not(:nth-of-type(1)){
+			border: 2px solid #e5e5e5;
+
+			margin: 20px;
+			padding: 55px 50px;
+
+			margin-bottom: 60px;
+
+			background-color: #ffffff;
+
+			&:nth-of-type(1){
+				padding-top: 0;
+			}
+		}
+
+		.main-form__inputs--legtoggle{
+			display:none;
+		}
+	}
+
+	.main-form__general{
+		display: flex;
+		flex-direction: column;
+	}
+	.main-form__inputs-list{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.input__list-item{
+		display: flex;
+		flex-direction: row;
+	//Форма ввода телефона
+		&.item-contacts{
+			flex-direction: column-reverse;
+			//Убираем двоеточие
+			& .item-names-paragraph--toggle{
+				display: none;
+			}
+		}
+	}
+
+	.input__list-item.item-names,
+	.input__list-item.item-contacts{
+		color: #d22856;
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 30px;
+		text-transform: uppercase;
+
+		& p:not(input){
+			margin: 22px;
+		}
+
+		& input[type="text"] {
+			width: 100%;
+			border: 2px solid #e5e5e5;
+
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: 400;
+
+			color: #283645;
+			background-color: #ffffff;
+
+			padding-left: 22px;
+			padding-right: 22px;
+		}
+	}
+
+	.input__list-item.item-contacts{
+		padding-bottom: 0;
+
+		& input[type="text"]{
+			width: 90%;
+
+		}
+		& #telephone{
+			background-image: url("../img/icon-phone.svg"), url("../img/form_icon-back.svg");
+			background-position: 96% center, right center;
+			background-repeat: no-repeat, no-repeat;
+		}
+		& #mail{
+			background-image: url("../img/icon-mail.svg"), url("../img/form_icon-back.svg");
+			background-position: 96% center, right center;
+			background-repeat: no-repeat, no-repeat;
+		}
+	}
+
+	.main-form__inputs textarea{
+		min-width: 496px;
+	}
+	.main-form__inputs.inputs-names{
+		order: -3;
+	}
+		.main-form__inputs.inputs-attachment{
+		order: -2;
+	}
+		.main-form__inputs.inputs-contacts{
+		order: -1;
+	}
+
+	.button-form-wrapper{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		margin-bottom: 50px;
+	}
+
 }
