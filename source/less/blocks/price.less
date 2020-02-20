@@ -1,0 +1,285 @@
+.price{
+	position: relative;
+
+	.info_advatages__wrap-items(100%, 4%, 4%);//Ширина экрана, высота элемента, смещение вверх
+
+	box-sizing: border-box;
+
+	background-color: #f2f2f2;
+	padding-top: 65px;
+
+	z-index: 4;
+}
+
+.price__table-wrapper{
+	overflow: auto;
+	overflow-x: overlay;
+}
+
+.price__table{
+	position: relative;
+	top: 0;
+	right: 0;
+
+	width: 840px;
+
+	background-color: #ffffff;
+
+	border-collapse: collapse;
+}
+
+.price__table-option{
+
+	height: 94px;
+
+	min-width: 276px;
+	min-height: 94px;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	border: 2px solid #e5e5e5;
+	box-sizing: border-box;
+	background-color: #283645;
+
+	& h3{
+		padding: 0;
+		margin: 0;
+
+		color: #ffffff;
+		font-family: "Open Sans";
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 30px;
+		text-transform: uppercase;
+	}
+
+	& p{
+		padding: 0;
+		margin: 0;
+		
+		color: #ffffff;
+		font-family: "Open Sans";
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 30px;
+		text-transform: uppercase;
+	}
+
+	//Отрисует полоску ХИТ на ячейке таблицы
+	//Переменные:
+	//Картинка BG, смещение сверху, снизу
+	//Надпись, смещение сверху, снизу
+	.table_bg_hit("../img/bg-hit.svg", 2px, 281px, "Хит", 10px, 291px);
+}
+.price__table-item--toggle,
+.price__table-option--off{
+	display: none;
+}
+.price__table-item{
+	position: relative;
+
+	width: 276px;
+	height: 59px;
+
+	padding-left: 22px;
+
+	color: #283645;
+
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
+	text-transform: uppercase;
+	vertical-align: middle;
+
+	border: 2px solid #e5e5e5;
+
+	&--yes::after{
+		content: "";
+
+		position: absolute;
+		top: 20px;
+		right: 17px;
+
+		width: 31px;
+		height: 21px;
+
+		background-color: transparent;
+		background-image: url("../img/icon-yes.svg");
+		background-repeat: no-repeat;
+		background-size: 31px 21px;
+	}
+	&--no::after{
+		content: "";
+
+		position: absolute;
+		top: 20px;
+		right: 17px;
+
+		width: 31px;
+		height: 21px;
+
+		background-color: transparent;
+		background-image: url("../img/icon-no.svg");
+		background-repeat: no-repeat;
+		background-size: 31px 21px;
+	}
+}
+
+.price__toggles{
+	.slider_uls();
+
+	position: sticky;
+	top: 0;
+	left: 0;
+
+	padding: 45px;
+}
+.toggles-item{
+	position: relative;
+}
+
+.slider__toggle-price{
+	.slider_buttons();
+}
+
+@media(min-width: @tablet-width){
+	.price{
+		.info_advatages__wrap-items(100%, 14%, 14%);//Ширина экрана, высота элемента, смещение вверх
+
+		padding-top: 75px;
+		padding-bottom: 70px;
+	}
+
+	.price__table-wrapper{
+		overflow: hidden;
+		overflow-x: hidden;
+	}
+	.price__table{
+		width: 620px;
+		margin: 0 auto;
+	}
+
+	.price__table-option{
+		width: 152px;
+		height: 75px;
+		
+		min-width: 152px;
+		min-height: 94px;
+
+		border-radius: 5px;
+
+		& h3{
+			font-size: 16px;
+			line-height: 30px;
+		}
+
+		& p{
+			font-size: 18px;
+		}
+
+		//Отрисует полоску ХИТ на ячейке таблицы
+		//Переменные:
+		//Картинка BG, смещение сверху, слева
+		//Надпись, смещение сверху, слева
+		.table_bg_hit("../img/bg-hit-tablet.svg", 2px, 310px, "Хит", 10px, 320px);
+	}
+	.price__table-item--toggle,
+	.price__table-option--off{
+		display: table-cell;
+		border-collapse: collapse;
+	}
+	.price__table-option--off{
+		background: transparent;
+		background-color: #f2f2f2;
+	}
+
+	.price__table-item{
+		width: 152px;
+		height: 45px;
+		min-height: 45px;
+
+		padding: 0;
+		vertical-align: middle;
+
+			&--yes::after{
+			content: "";
+
+			position: absolute;
+			
+			top: 25%;
+			right: 45%;
+	
+			width: 31px;
+			height: 21px;
+
+			background-color: transparent;
+			background-image: url("../img/icon-yes.svg");
+			background-repeat: no-repeat;
+			background-size: 31px 21px;
+		}
+		&--no::after{
+			content: "";
+
+			position: absolute;
+			
+			top: 25%;
+			right: 45%;
+	
+			width: 31px;
+			height: 21px;
+
+			background-color: transparent;
+			background-image: url("../img/icon-no.svg");
+			background-repeat: no-repeat;
+			background-size: 31px 21px;
+		}
+	}
+	.price__table-text--toggle{
+		display:none;
+		width: 0;
+	}
+
+	.price__toggles{
+		display: none;
+	}
+}
+
+@media(min-width: @desctop-width){
+	.price{
+		.info_advatages__wrap-items(100%, 25%, 25%);//Ширина экрана, высота элемента, смещение вверх
+
+		padding-top: 75px;
+		padding-bottom: 70px;
+	}
+	.price__table{
+		width: 940px;
+	}
+	.price__table-option{
+		width: 152px;
+		height: 75px;
+	
+		min-width: 152px;
+		min-height: 94px;
+
+		border-radius: 5px;
+
+		& h3{
+			font-size: 18px;
+			line-height: 30px;
+			font-weight: 700;
+		}
+
+		& p{
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		//Отрисует полоску ХИТ на ячейке таблицы
+		//Переменные:
+		//Картинка BG, смещение сверху, слева
+		//Надпись, смещение сверху, слева
+		.table_bg_hit("../img/bg-hit-tablet.svg", 2px, 471px, "Хит", 10px, 480px);
+	}
+}

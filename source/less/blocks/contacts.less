@@ -1,0 +1,173 @@
+.contacts{
+	padding-top: 55px;
+
+	& h2{
+		text-align: center;
+
+		color: #283645;
+		font-family: "Open Sans";
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: 300;
+		margin: 0;
+		margin-bottom: 45px;
+	}
+}
+
+.contacts-wrapper{
+	position: relative;
+
+	//Нарисует теугольник, наезжающий на карту
+	//Смещение вниз, высота
+	.triangle_contact_wrap(-30%, 30%);
+
+	z-index: 5;
+}
+
+.contacts__list{
+	list-style:none;
+
+	margin: 0;
+	padding: 0;
+
+	text-align: center; 
+}
+
+.contacts__item{
+	margin-bottom: 25px;
+
+	& h3 {
+		margin: 0;
+		padding: 0;
+
+		color: #283645;
+		font-family: "Open Sans";
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 700;
+	}
+
+	& p {
+		margin: 0;
+		padding: 0;
+
+		color: #d22856;
+		font-family: "Open Sans";
+		font-size: 24px;
+		line-height: 29px;
+		font-weight: 300;
+	}
+}
+.mail-link{
+	cursor: pointer;
+
+	&:hover,
+	&:focus{
+		color: #283645;
+	}
+	&:active{
+		color: rgba(40, 54, 69, 0.3);
+	}
+}
+
+.contacts__map{
+	position: relative;
+	display: block;
+	
+	overflow: hidden;
+
+	min-width: 320px;
+	height: 200px;
+	z-index: 1;
+
+	& .contacts__map-marker{
+		position: absolute;
+		top: 42%;
+		left: 42%;
+
+		width: 36px;
+		height: 35px;
+	}
+}
+
+@media(min-width: @tablet-width){
+	.contacts{
+
+		& h2{
+			text-align: center;
+
+			color: #283645;
+			font-family: "Open Sans";
+			font-size: 40px;
+			font-weight: 300;
+			line-height: 49px;
+
+			margin-bottom: 50px;
+		}
+	}
+	.contacts-wrapper{
+		position: relative;
+
+		//Нарисует теугольник, наезжающий на карту
+		//Смещение вниз, высота
+		.triangle_contact_wrap(-49%, 50%);
+
+		z-index: 5;
+	}
+
+	.contacts__list{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.contacts__item{
+		margin-bottom: 50px;
+	}
+
+	.contacts__map{
+		min-width: 660px;
+		height: 370px;
+		z-index: 1;
+
+		& .contacts__map-marker{
+			position: absolute;
+			top: 55%;
+			left: 48%;
+
+			width: 36px;
+			height: 35px;
+		}
+	}
+}
+
+@media(min-width: @desctop-width){
+	.contacts{
+
+		& h2{
+			font-size: 50px;
+			line-height: 60px;
+
+			margin-bottom: 60px;
+		}
+	}
+	.contacts-wrapper{
+		position: relative;
+
+		//Нарисует теугольник, наезжающий на карту
+		//Смещение вниз, высота
+		.triangle_contact_wrap(-95%, 100%);
+
+		z-index: 5;
+	}
+
+	.contacts__list{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.contacts__item{
+		margin-bottom: 50px;
+	}
+}

@@ -1,0 +1,4 @@
+#Git-ignore
+node_modules/
+build/
+package-lock.json
