@@ -16,6 +16,7 @@ var copy = require('gulp-copy');
 
 var posthtml = require("gulp-posthtml"),
 	include = require("posthtml-include"),
+	htmlmin = require('gulp-htmlmin'),
 	rigger = require('gulp-rigger');
 
 var babel = require('gulp-babel');
@@ -91,6 +92,7 @@ gulp.task("html", function(){
 	.pipe(posthtml([
 		include({encoding: 'utf-8'})
 	]))
+	.pipe(htmlmin({ collapseWhitespace: true }))
 	.pipe(gulp.dest("./build/"));
 });
 
