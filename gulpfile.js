@@ -15,7 +15,8 @@ var rename = require("gulp-rename");
 var copy = require('gulp-copy');
 
 var posthtml = require("gulp-posthtml"),
-	include = require("posthtml-include");
+	include = require("posthtml-include"),
+	rigger = require('gulp-rigger');
 
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
@@ -86,6 +87,7 @@ gulp.task("style", function(){
 
 gulp.task("html", function(){
 	return gulp.src("./source/*.html")
+	.pipe(rigger())
 	.pipe(posthtml([
 		include({encoding: 'utf-8'})
 	]))
@@ -102,7 +104,7 @@ gulp.task("script", function(){
 	.pipe(gulp.dest("./build/script/"))
 })
 
-gulp.task("serve", function(done){
+gulp.task("serve", function(){
 		server.init({
 		server: "./build/",
 		notify: false,
@@ -110,20 +112,10 @@ gulp.task("serve", function(done){
 		cors: true,
 		ui: false
 	});
-	gulp.watch("./source/less/", gulp.series('style'));
-	gulp.watch("./source/less/**/*.less").on("change", () => {
-		server.reload();
-		done();
-	});
-	gulp.watch("./source/*.html", gulp.series('style', 'html')).on("change", () => {
-		server.reload();
-		done();
-	});
-	gulp.watch("./source/script/**/*.js", gulp.series('script', 'style', 'html')).on("change", () => {
-		server.reload();
-		done();
-	});
-	done();
+	gulp.watch("./source/less/**/*.less", gulp.series('style')).on('change', server.reload);
+
+	gulp.watch("./source/*.html", gulp.series('html', 'style')).on('change', server.reload);
+	gulp.watch("./source/script/**/*.js", gulp.series('script', 'html', 'style')).on('change', server.reload);
 });
 
 gulp.task('default', gulp.series('style', 'serve'));
