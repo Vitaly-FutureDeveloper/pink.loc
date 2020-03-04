@@ -4,7 +4,9 @@ var nojs = document.querySelectorAll('.nojs');
 var menu = document.querySelector('.main-nav'),
 	PHbuttonToggle = document.querySelector('.page-header__toggle'),
 	siteListItems = document.querySelectorAll('.site-list__item'),
-	pageHeader = document.querySelector('.page-header');
+	pageHeader = document.querySelector('.page-header'),
+	pageMain = document.querySelector('.page-main'),
+	slogan = document.querySelector('.intro__slogan');
 
 PHbuttonToggle.addEventListener('click', function(){
 	PHbuttonToggle.classList.toggle('page-header__toggle--closed');
@@ -14,6 +16,10 @@ PHbuttonToggle.addEventListener('click', function(){
 	PHbuttonToggle.classList.toggle('page-header__toggle--opened');
 	pageHeader.classList.toggle('page-header--opened');
 	menu.classList.toggle('main-nav--opened');
+
+	pageMain.classList.toggle('page-main--opened-nav');
+
+	slogan.classList.toggle('show-slogan');
 });
 
 

@@ -50,7 +50,7 @@ gulp.task("images", function(){
 	.pipe(imagemin([
 		imagemin.mozjpeg({quality: 75, progressive: true}),
 		imagemin.optipng({optimizationLevel: 3}),
-		imagemin.svgo()
+		//imagemin.svgo()
 	]))
 	.pipe(gulp.dest("./build/img/"))
 })

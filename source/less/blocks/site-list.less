@@ -28,21 +28,27 @@
 		opacity: 0.3;
 	}
 }
-
+.site-list__item a{
+	min-height:40px;
+}
 @media(min-width: @tablet-width){
-	.main-nav--opened .main-nav__wrapper{
-		top: 109px;
+	.main-nav--opened{
+		top: 260px;
 		right: 0;
 		left: 0px;
 	}
 }
 
 @media(min-width: @desctop-width){
-	.main-nav--closed .site-list{
+	.main-nav--closed .site-list,
+	 .site-list{
 		display:flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
+		align-content: center;
+
+		vertical-align: middle;
 
 		background: transparent;
 	}
