@@ -2,8 +2,18 @@
 	display: none;
 }
 
-.inner_page .page-footer{
+.page-main__inner-page .page-footer{
+	position: relative;
+
 	display: block;
+
+	top: -40px;
+
+	padding: 0;
+	margin: 0;
+}
+.page-footer__item {
+	margin: 15px;
 }
 .page-foter-list__icons{
 	display: flex;
@@ -16,10 +26,12 @@
 
 	list-style: none;
 }
+/*
 .list__icon-footer{
 	margin: 25px 0;
 	padding: 0;
 }
+*/
 .social__list{
 	display: flex;
 	flex-direction: row;
@@ -94,6 +106,10 @@
 	.page-footer{
 		display: block;
 	}
+	.page-main__inner-page .page-footer{
+		top: -140px;
+	}
+
 	.page-foter-list__icons{
 		display: flex;
 		flex-direction: row;
@@ -113,5 +129,8 @@
 @media(min-width: @desctop-width){
 	.page-foter-list__icons{
 		min-height: 195px;
+	}
+	.page-main__inner-page .page-footer {
+	    top: -210px;
 	}
 }
