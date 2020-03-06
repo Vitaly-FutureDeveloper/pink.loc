@@ -22,7 +22,6 @@ PHbuttonToggle.addEventListener('click', function(){
 	slogan.classList.toggle('show-slogan');
 });
 
-
 //*****************************
 //***Меняющий цвета логотип**** >>
 //*****************************
