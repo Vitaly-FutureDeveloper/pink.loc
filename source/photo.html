@@ -18,8 +18,10 @@
 	<section class="photos">
 		<h2 class="visually-hidden">Блок с фотографиями</h2>
 		
+		
 		<div class="mock"></div>
 		
+
 		<article class="photos__panorama">
 			<picture>
 				<source type="image/webp" media="(min-width:960px)" srcset="img/panorama-desktop@2x.webp 2x, img/panorama-desktop@1x.webp 1x">
@@ -197,17 +199,17 @@
 						<li class="photo-form__icon-item">
 							<include src="build/img/icon-editor-crop.svg" locals='{
         "icon-class": "photo-form__icon-pic"}'></include>
-							<input type="range" class="photo-form__ranger--crop">
+							<input type="range" class="photo-form__ranger photo-form__ranger--crop">
 						</li>
 						<li class="photo-form__icon-item">
 							<include src="build/img/icon-editor-fill.svg" locals='{
         "icon-class": "photo-form__icon-pic"}'></include>
-							<input type="range" class="photo-form__ranger--fill">
+							<input type="range" class="photo-form__ranger photo-form__ranger--fill">
 						</li>
 						<li class="photo-form__icon-item">
 							<include src="build/img/icon-editor-contrast.svg" locals='{
         "icon-class": "photo-form__icon-pic"}'></include>
-							<input type="range" class="photo-form__ranger--contrast">
+							<input type="range" class="photo-form__ranger photo-form__ranger--contrast">
 						</li>
 					</ul>
 				</fieldset>
