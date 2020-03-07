@@ -86,3 +86,47 @@
 	background-color: rgba(39, 54, 69, 0.3);
 	}
 }
+
+@media(min-width: @tablet-width){
+	.photo-form__general{
+		display: flex;
+
+		padding: 10px; 
+		padding-top: 40px;
+		border: none;
+
+		margin-bottom: 20px;
+
+	}
+
+	.photo-form__icon-list{
+		flex-direction: column;
+		margin-top: 40px;
+
+		margin-bottom: 40px;
+	}
+	.photo-form__icon-item{
+		margin: 0 25px 40px;
+	}
+	.photo-form__icon-pic{
+		width: 25px;
+		height: auto;
+
+		margin-right: 20px;
+
+		& .icon--color {
+			fill: #D22856;
+		}
+	}
+	.photo-form__general-regular{
+		display: none;
+	}
+
+	.photo-form__general-buttons{
+		grid-gap: 25px;
+	}
+
+	.photo-form__general{
+		margin-bottom: 0;
+	}
+}
