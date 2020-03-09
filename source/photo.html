@@ -21,7 +21,6 @@
 		
 		<div class="mock"></div>
 		
-
 		<article class="photos__panorama">
 			<picture>
 				<source type="image/webp" media="(min-width:960px)" srcset="img/panorama-desktop@2x.webp 2x, img/panorama-desktop@1x.webp 1x">
@@ -197,24 +196,45 @@
 				<fieldset class="photo-form__general-icons">
 					<ul class="photo-form__icon-list">
 						<li class="photo-form__icon-item">
-							<include src="build/img/icon-editor-crop.svg" locals='{
-        "icon-class": "photo-form__icon-pic"}'></include>
+							<include src="build/img/icon-editor-crop.svg"></include>
+							<fieldset class="photo-form__range 
+													photo-form__optional-regular
+													photo-form__optional-regular--crop">
+								<div class="photo-form__range-cursor"></div>
+							</fieldset>
+							<!--
 							<input type="range" class="photo-form__ranger photo-form__ranger--crop">
+							-->
 						</li>
 						<li class="photo-form__icon-item">
-							<include src="build/img/icon-editor-fill.svg" locals='{
-        "icon-class": "photo-form__icon-pic"}'></include>
+							<include src="build/img/icon-editor-fill.svg"></include>
+							<fieldset class="photo-form__range 
+													photo-form__optional-regular
+													photo-form__optional-regular--fill">
+								<div class="photo-form__range-cursor"></div>
+							</fieldset>
+							<!--
 							<input type="range" class="photo-form__ranger photo-form__ranger--fill">
+							-->
 						</li>
 						<li class="photo-form__icon-item">
-							<include src="build/img/icon-editor-contrast.svg" locals='{
-        "icon-class": "photo-form__icon-pic"}'></include>
+							<include src="build/img/icon-editor-contrast.svg"></include>
+							<fieldset class="photo-form__range 
+													photo-form__optional-regular
+													photo-form__optional-regular--contrast">
+								<div class="photo-form__range-cursor"></div>
+							</fieldset>
+							<!--
 							<input type="range" class="photo-form__ranger photo-form__ranger--contrast">
+							-->
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset class="photo-form__general-regular">
+				<fieldset class="photo-form__range photo-form__general-regular">
+					<div class="photo-form__range-cursor"></div>
+					<!--
 					<input type="range" class="photo-form__general-ranger">
+					-->
 				</fieldset>
 				<fieldset class="photo-form__general-buttons">
 					<button class="photo-form__general-button button-submit">Запостить</button>
